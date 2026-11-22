@@ -101,13 +101,3 @@ SecureIoT/
 6. **Reports & Exports (`pages/5_Reports.py`)**: Full historical audit logs, attack simulation logs, security event distribution, and instant 1-click CSV download.
 7. **Cloud API (`api/main.py`)**: Production-grade FastAPI REST API with JWT Bearer authentication, SlowAPI rate limiting (IP-based protection), input schema validation, and encrypted telemetry storage.
 
----
-
-## 🎓 University Viva Checklist & Tips
-
-- **Question: Why is AES-256-CBC chosen for telemetry?**
-  *Answer:* AES is the NIST-approved symmetric cipher standard offering strong security with low hardware overhead on microcontroller/IoT gateways. CBC mode with PKCS7 ensures identical blocks produce distinct ciphertexts through random Initialization Vectors (IV).
-- **Question: How does secure mode defeat the Replay attack?**
-  *Answer:* Secure mode attaches a unique pseudo-random nonce and a millisecond timestamp to every packet. The server maintains a nonce cache and rejects previously observed nonces or expired timestamps.
-- **Question: How does HMAC guarantee integrity?**
-  *Answer:* HMAC uses a pre-shared secret key combined with SHA-256. If a man-in-the-middle alters even 1 bit of the sensor reading, the cryptographic hash computed on the server will not match the transmitted MAC.
