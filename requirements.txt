@@ -1,0 +1,12 @@
+streamlit==1.45.1
+fastapi==0.115.6
+uvicorn==0.34.0
+cryptography==44.0.0
+bcrypt==4.2.1
+pyjwt==2.10.1
+plotly==5.24.1
+pandas==2.2.3
+python-multipart==0.0.20
+slowapi==0.1.9
+httpx==0.28.1
+pytest==8.3.4
